@@ -10,6 +10,40 @@ html(lang="en")
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        .welcome-section
+          .parallax
+          section.hero
+            .container
+              header.header
+                .logo СМ
+                .menu
+                  ul.menu__list
+                    li.menu__item 
+                      a.menu__link Главная
+                    li.menu__item
+                      a.menu__link Обо мне
+                    li.menu__item
+                      a.menu__link Навыки
+                    li.menu__item
+                      a.menu__link Работы
+                    li.menu__item
+                      a.menu__link Отзывы
+                    li.menu__item
+                      a.menu__link Связаться
+                .socials
+                  ul.socials
+                    - var socials = ['insta', 'vk', 'github'];
+                    each item in socials
+                      li.socials__item
+                        a(href="#").socials__link
+                          +icon(item, 'socials__icon')
+              .hero__content
+                .user-info
+                  .user-info__title Личный сайт#[br]веб-разработчика
+                  .user-info__name Сайфутдинов Марат
+                .hero__scroll-btn
+                  .scroll-btn
+                    a(href="").scroll-btn__link Скролл
+          .triangles
+
+        
